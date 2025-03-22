@@ -1,0 +1,299 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f3fa;
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  color: #0000FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+#pageOuterWrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pageInnerWrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Header section */
+#rowTop {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-text {
+  padding: 15px;
+}
+
+.green-title {
+  color: #008000;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.notice-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.downtime-title {
+  color: #FF0000;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.downtime-text {
+  color: #FF0000;
+  font-size: 16px;
+}
+
+.blue-text {
+  color: #0000FF;
+  font-size: 14px;
+}
+
+.instruction-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.spacer {
+  height: 10px;
+}
+
+.help-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.help-link a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.help-link a::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-image: url('https://ext.same-assets.com/3477646080/2228634512.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.help-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Login box */
+#loginOuterWrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#loginBoxWrap {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#loginHeaderWrap {
+  background-color: #f3f3f3;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+#loginDistrict {
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+}
+
+#loginBodyWrap {
+  padding: 20px;
+}
+
+#loginBody {
+  position: relative;
+}
+
+#loginBody table {
+  width: 100%;
+}
+
+.loginLabel {
+  text-align: right;
+  padding: 8px;
+  width: 100px;
+}
+
+.loginData {
+  padding: 8px;
+}
+
+.EditLabel {
+  font-weight: bold;
+}
+
+.EditText {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.EditSelectFixed {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.loginButton {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #273541;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #344456;
+  text-decoration: none;
+}
+
+.loginLinks {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#version {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Login area dropdown */
+#loginAreaWrap {
+  margin-top: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#loginArea {
+  padding: 15px;
+}
+
+/* Footer */
+#loginFooterWrap {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#rowBottom {
+  margin-bottom: 20px;
+}
+
+.follow-text {
+  font-size: 1.25em;
+  margin-bottom: 15px;
+}
+
+.app-links {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.app-store, .google-play {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.parent-square-text {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.parent-square {
+  max-width: 200px;
+  height: auto;
+}
+
+#copyArea {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+#infoArea {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .loginLabel {
+    width: 80px;
+  }
+
+  .app-store, .google-play {
+    width: 120px;
+  }
+
+  .follow-text, .parent-square-text {
+    font-size: 1em;
+  }
+}
